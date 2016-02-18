@@ -89,8 +89,6 @@ def install_ceph():
 	   elif release == 7:
 	       pkg_name = "ceph-0.94.5-el7.tgz"
 	   filename = str(pardir)+"/packages/"+pkg_name
-	   print 'filename:',filename
-           #raw_input(' ') 
 	   put(filename,'/root')
         with settings(host_string = host[0], password = host[1], warn_only = True):
            cmd = "tar xvzf"+" "+pkg_name
@@ -291,4 +289,3 @@ if __name__ == '__main__':
     install_ceph()
     ceph_check()
     joint_openstack_and_ceph()
-
