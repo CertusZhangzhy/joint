@@ -18,7 +18,7 @@ computer2 = 'root@172.16.161.171'
 
 env.roledefs = {
 		'admin': [admin], 
-		'ceph-nodes': [admin],
+		#'ceph-nodes': [admin],
 		'controllers' : [controller1, controller2, controller3],
 		'computers' : [computer1, computer2],
 		#'controllers' : [ctrl1],
