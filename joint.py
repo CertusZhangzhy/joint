@@ -117,15 +117,15 @@ ini.set('mon', 'mon pg warn max per osd', '2048')
 fp = file('ceph.conf', 'wb')
 ini.write(fp)
 '''
-    ceph_hosts = get_ceph_hosts()
+    #ceph_hosts = get_ceph_hosts()
     control_hosts = get_control_hosts()
     compute_hosts = get_compute_hosts()
     openstack_hosts = control_hosts+compute_hosts
 
-    ceph_hosts = copy.deepcopy(ceph_hosts)
-    ceph_hosts.extend(control_hosts)
-    ceph_hosts.extend(compute_hosts)
-    ceph_hosts = list(set(ceph_hosts))
+    #ceph_hosts = copy.deepcopy(ceph_hosts)
+    #ceph_hosts.extend(control_hosts)
+    #ceph_hosts.extend(compute_hosts)
+    #ceph_hosts = list(set(ceph_hosts))
  
 
     uuid = ''
@@ -272,14 +272,14 @@ def get_compute_hosts():
     for host in hosts:
         result.append((host, env.passwords[host]))
     return result
-
+'''
 def get_ceph_hosts():
     result = []
     hosts = env.roledefs['ceph-nodes']
     for host in hosts:
         result.append((host, env.passwords[host]))
     return result
-
+'''
 def get_ceph_admin():
     host = env.roledefs['admin'][0]
     return(host, env.passwords[host])
