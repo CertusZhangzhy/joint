@@ -33,7 +33,5 @@ echo "clean"
 %files
 /opt/fabric-joint
 
-
-
 %changelog
 
